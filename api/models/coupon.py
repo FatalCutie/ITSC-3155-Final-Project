@@ -5,7 +5,7 @@ from ..dependencies.database import Base
 
 
 class Coupon(Base):
-    __tablename__ = "coupons"
+    __tablename__ = "coupon"
 
     discount = Column(Integer, index=True, nullable=False, server_default='0.0')
 
