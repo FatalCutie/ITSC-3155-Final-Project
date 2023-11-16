@@ -19,7 +19,6 @@ class RecipeUpdate(BaseModel):
     resource_id: Optional[int] = None
     amount: Optional[int] = None
     price: Optional[int] = None
-    rating: Optional[int] = None
 
 class Recipe(RecipeBase):
     id: int

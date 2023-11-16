@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from ..dependencies.database import Base
 
-class PersonBase(Base):
+class Person(Base):
     __tablename__ = "person"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
@@ -15,3 +15,4 @@ class PersonBase(Base):
     #customers = relationship("Customer", back_populates="person")
     #managers = relationship("Manager", back_populates="manager")
     #staff = relationship("Staff", back_popoulates="staff")
+    coupon = relationship("Coupon", back_populates="person")
