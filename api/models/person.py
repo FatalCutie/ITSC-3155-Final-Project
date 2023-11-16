@@ -12,6 +12,6 @@ class PersonBase(Base):
     email_address = Column(String(200))
 
     # TODO: These models/schemas haven't been implemented yet, so this doesn't work yet
-    # customers = relationship("Customer", back_populates="person")
-    # managers = relationship("Manager", back_populates="manager")
-    # staff = relationship("Staff", back_popoulates="staff")
+    #customers = relationship("Customer", back_populates="person")
+    #managers = relationship("Manager", back_populates="manager")
+    #staff = relationship("Staff", back_popoulates="staff")

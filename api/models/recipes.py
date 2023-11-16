@@ -16,3 +16,4 @@ class Recipe(Base):
 
     sandwich = relationship("Sandwich", back_populates="recipes")
     resource = relationship("Resource", back_populates="recipes")
+    coupon = relationship("Recipe", back_populates="resource")
