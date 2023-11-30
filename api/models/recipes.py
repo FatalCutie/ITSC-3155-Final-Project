@@ -14,4 +14,4 @@ class Recipe(Base):
 
     sandwich = relationship("Sandwich", back_populates="recipes")
     resource = relationship("Resource", back_populates="recipes")
-    coupon = relationship("Coupon", back_populates="recipes")
+    #coupon = relationship("Coupon", back_populates="recipes") put into orders.py
