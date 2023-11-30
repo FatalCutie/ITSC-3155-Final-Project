@@ -10,5 +10,4 @@ class Review(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     reviewText = Column(String(300), unique=True, nullable=False)
 
-    rating = Column(Integer, primary_key=True, index=True, autoincrement=True)
     person = relationship("Person", back_populates="review")
