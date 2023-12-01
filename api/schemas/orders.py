@@ -8,8 +8,11 @@ class OrderBase(BaseModel):
     customer_name: str
     description: Optional[str] = None
 
-
-
+# <<<<<<< HEAD
+#
+#
+# =======
+# >>>>>>> 9a4525fd0edb055a9279c872ec8bdf2ce2c29747
 class OrderCreate(OrderBase):
     pass
 

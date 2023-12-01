@@ -12,4 +12,9 @@ class Order(Base):
     order_date = Column(DATETIME, nullable=False, server_default=str(datetime.now()))
     description = Column(String(300))
 
-    order_details = relationship("OrderDetail", back_populates="order")
+    # Coupon foreign key referencing the id column in the coupons table
+    coupon_id = Column(Integer, ForeignKey("coupon.id"))
+
+    # establish relationships
+    order_details = relationship("OrderDetail", back_populates="orders")
+    coupon = relationship("Coupon", back_populates="orders")
