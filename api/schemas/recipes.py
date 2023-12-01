@@ -14,11 +14,13 @@ class RecipeCreate(RecipeBase):
     resource_id: int
     price: int
 
+
 class RecipeUpdate(BaseModel):
     sandwich_id: Optional[int] = None
     resource_id: Optional[int] = None
     amount: Optional[int] = None
     price: Optional[int] = None
+
 
 class Recipe(RecipeBase):
     id: int

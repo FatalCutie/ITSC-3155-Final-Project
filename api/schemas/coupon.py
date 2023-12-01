@@ -1,11 +1,12 @@
 from typing import Optional
 from pydantic import BaseModel
+from sqlalchemy import DATETIME
 
 
 class CouponBase(BaseModel):
     discount: int
-    code: int
-    expiration_date: str
+    code: str
+    expiration_date: Optional[DATETIME]
 
 
 class CouponCreate(CouponBase):

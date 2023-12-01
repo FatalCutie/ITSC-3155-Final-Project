@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
 from .order_details import OrderDetail
 
@@ -17,10 +17,11 @@ class OrderUpdate(BaseModel):
     description: Optional[str] = None
 
 
+
 class Order(OrderBase):
     id: int
     order_date: Optional[datetime] = None
-    order_details: list[OrderDetail] = None
+    order_details: List[OrderDetail] = None
 
     class ConfigDict:
         from_attributes = True
