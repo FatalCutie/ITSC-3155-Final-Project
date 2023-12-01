@@ -8,6 +8,9 @@ class Review(Base):
     __tablename__ = "review"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    rating = Column(Integer, nullable=False)
     reviewText = Column(String(300), unique=True, nullable=False)
+    order_detail_id = Column(Integer, ForeignKey("order_details.id"), nullable=True)
 
-    person = relationship("Person", back_populates="review")
+    # establish relationships
+    order_detail = relationship("OrderDetail", back_populates="review")
