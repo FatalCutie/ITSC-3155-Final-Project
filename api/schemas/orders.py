@@ -9,6 +9,7 @@ class OrderBase(BaseModel):
     description: Optional[str] = None
 
 
+
 class OrderCreate(OrderBase):
     pass
 
