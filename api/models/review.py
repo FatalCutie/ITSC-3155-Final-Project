@@ -13,4 +13,4 @@ class Review(Base):
     order_detail_id = Column(Integer, ForeignKey("order_details.id"), nullable=True)
 
     # establish relationships
-    order_detail = relationship("OrderDetail", back_populates="review")
+    order_details = relationship("OrderDetail", back_populates="review")

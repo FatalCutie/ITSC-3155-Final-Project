@@ -14,4 +14,4 @@ class OrderDetail(Base):
     # establish relationships
     sandwich = relationship("Sandwich", back_populates="order_details")
     order = relationship("Order", back_populates="order_details")
-    review = relationship("Review", back_populates="order_detail")
+    review = relationship("Review", back_populates="order_details")

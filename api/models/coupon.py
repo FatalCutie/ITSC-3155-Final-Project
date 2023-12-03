@@ -21,3 +21,4 @@ class Coupon(Base):
     # establish relationships
     orders = relationship("orders", back_populates="coupon")
 # >>>>>>> 9a4525fd0edb055a9279c872ec8bdf2ce2c29747
+
