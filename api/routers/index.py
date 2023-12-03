@@ -1,8 +1,4 @@
 from . import orders, order_details, recipes, resources
-<<<<<<< HEAD
-
-=======
->>>>>>> f43cbf5d924e16c9c6b542e75fa750e29124302c
 
 # resources won't import?
 def load_routes(app):
