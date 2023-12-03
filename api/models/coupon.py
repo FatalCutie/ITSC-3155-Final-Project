@@ -12,13 +12,9 @@ class Coupon(Base):
     code = Column(String(20), unique=True, nullable=False)
     expiration_date = Column(DATETIME, nullable=True)
 
-# <<<<<<< HEAD
 
     # TODO: These models/schemas haven't been implemented yet, so this doesn't work yet
     recipes = relationship("Recipe", back_populates="coupon") #recipe where price is stored
     person = relationship("Person", back_populates="coupon")
-# =======
     # establish relationships
     orders = relationship("orders", back_populates="coupon")
-# >>>>>>> 9a4525fd0edb055a9279c872ec8bdf2ce2c29747
-
