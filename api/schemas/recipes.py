@@ -12,6 +12,13 @@ class RecipeBase(BaseModel):
 class RecipeCreate(RecipeBase):
     sandwich_id: int
     resource_id: int
+<<<<<<< HEAD
+=======
+    price: int
+    #cheese: int
+    #bread: int
+    #tomato: int
+>>>>>>> f43cbf5d924e16c9c6b542e75fa750e29124302c
 
 
 class RecipeUpdate(BaseModel):
