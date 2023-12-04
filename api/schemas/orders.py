@@ -14,11 +14,6 @@ class OrderBase(BaseModel):
     delivery_type: Optional[DeliveryType] = None
 
 
-# <<<<<<< HEAD
-#
-#
-# =======
-# >>>>>>> 9a4525fd0edb055a9279c872ec8bdf2ce2c29747
 class OrderCreate(OrderBase):
     pass
 

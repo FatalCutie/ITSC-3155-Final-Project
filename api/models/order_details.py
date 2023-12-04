@@ -10,6 +10,7 @@ class OrderDetail(Base):
     order_id = Column(Integer, ForeignKey("orders.id"))
     sandwich_id = Column(Integer, ForeignKey("sandwiches.id"))
     amount = Column(Integer, index=True, nullable=False)
+    date = Column(DATETIME)
 
     # establish relationships
     sandwich = relationship("Sandwich", back_populates="order_details")
