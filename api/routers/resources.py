@@ -5,7 +5,7 @@ from ..schemas import resources as schema
 from ..dependencies.database import engine, get_db
 
 router = APIRouter(
-    tags=['Resource'],
+    tags=['Resources'],
     prefix="/resources"
 )
 

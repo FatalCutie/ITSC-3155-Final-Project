@@ -12,11 +12,11 @@ class RecipeBase(BaseModel):
 class RecipeCreate(RecipeBase):
     sandwich_id: int
     resource_id: int
+
     price: int
     #cheese: int
     #bread: int
     #tomato: int
-
 
 class RecipeUpdate(BaseModel):
     sandwich_id: Optional[int] = None
