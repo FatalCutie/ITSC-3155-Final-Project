@@ -22,7 +22,6 @@ class ReviewUpdate(BaseModel):
 
 class Review(ReviewBase):
     id: int
-    review_id: int
     order_detail: OrderDetail = None
 
     class ConfigDict:
