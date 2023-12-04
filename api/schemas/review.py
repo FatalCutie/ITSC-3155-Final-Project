@@ -1,10 +1,13 @@
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel
+from .order_details import OrderDetail
 
 
 class ReviewBase(BaseModel):
-    reviewText: str
+    rating: Optional[int] = None
+    reviewText: Optional[str] = None
+    order_detail_id: Optional[int] = None
 
 
 class ReviewCreate(ReviewBase):
@@ -12,11 +15,15 @@ class ReviewCreate(ReviewBase):
 
 
 class ReviewUpdate(BaseModel):
+    rating: Optional[int] = None
     reviewText: Optional[str] = None
+    order_detail_id: Optional[int] = None
 
 
 class Review(ReviewBase):
     id: int
+    review_id: int
+    order_detail: OrderDetail = None
 
     class ConfigDict:
         from_attributes = True

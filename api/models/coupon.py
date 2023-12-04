@@ -14,7 +14,7 @@ class Coupon(Base):
 
 
     # TODO: These models/schemas haven't been implemented yet, so this doesn't work yet
-    recipes = relationship("Recipe", back_populates="coupon") #recipe where price is stored
-    person = relationship("Person", back_populates="coupon")
+    # recipes = relationship("Recipe", back_populates="coupon") #recipe where price is stored
+    # person = relationship("Person", back_populates="coupon")
     # establish relationships
-    orders = relationship("orders", back_populates="coupon")
+    # orders = relationship("orders", back_populates="coupon")
