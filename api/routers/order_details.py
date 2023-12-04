@@ -20,9 +20,9 @@ def read_all(db: Session = Depends(get_db)):
     return controller.read_all(db)
 
 
-@router.get("/", response_model=list[schema.OrderDetail])
-def read_date_range(startdate: str, enddate: str, db: Session = Depends(get_db)):
-    return controller.read_date_range(db, startdate, enddate)
+# @router.get("/", response_model=list[schema.OrderDetail])
+# def read_date_range(startdate: str, enddate: str, db: Session = Depends(get_db)):
+#     return controller.read_date_range(db, startdate, enddate)
 
 
 @router.get("/{item_id}", response_model=schema.OrderDetail)

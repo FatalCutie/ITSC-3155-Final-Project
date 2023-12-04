@@ -43,20 +43,20 @@ def read_one(db: Session, item_id):
     return item
 
 
-def read_date_range(db: Session, startdate, enddate):
-    try:
-        startDate = datetime.strptime(startdate, "%Y-%m-%d")
-        endDate = datetime.strptime(enddate, "%Y-%m-%d")
-        ordersInRange = []
-        for order in db.query(model.OrderDetail).all():
-            i = 0
-            if startDate <= model.OrderDetail.datetime <= endDate:
-                ordersInRange[i] = order
-            i += 1
-    except SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
-    return ordersInRange
+# def read_date_range(db: Session, startdate, enddate):
+#     try:
+#         startDate = datetime.strptime(startdate, "%Y-%m-%d")
+#         endDate = datetime.strptime(enddate, "%Y-%m-%d")
+#         ordersInRange = []
+#         for order in db.query(model.OrderDetail).all():
+#             i = 0
+#             if startDate <= model.OrderDetail.datetime <= endDate:
+#                 ordersInRange[i] = order
+#             i += 1
+#     except SQLAlchemyError as e:
+#         error = str(e.__dict__['orig'])
+#         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
+#     return ordersInRange
 
 
 def update(db: Session, item_id, request):
