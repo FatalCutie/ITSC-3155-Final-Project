@@ -6,7 +6,6 @@ from .sandwiches import Sandwich
 
 class OrderDetailBase(BaseModel):
     amount: int
-    # date: datetime
 
 
 class OrderDetailCreate(OrderDetailBase):
