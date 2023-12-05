@@ -10,7 +10,6 @@ def create(db: Session, request):
         order_id=request.order_id,
         sandwich_id=request.sandwich_id,
         amount=request.amount,
-        date=datetime
     )
 
     try:
