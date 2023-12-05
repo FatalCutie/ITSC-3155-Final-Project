@@ -15,8 +15,8 @@ class CouponCreate(CouponBase):
 
 class CouponUpdate(BaseModel):
     discount: Optional[int] = None
-    code: Optional[int] = None
-    expiration_date: Optional[str] = None
+    code: Optional[str] = None
+    expiration_date: Optional[datetime] = None
 
 
 class Coupon(CouponBase):
