@@ -10,7 +10,7 @@ class Coupon(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     discount = Column(DECIMAL(precision=5, scale=2), index=True, nullable=False, server_default='0.0')
     code = Column(String(20), unique=True, nullable=False)
-    expiration_date = Column(DATETIME, nullable=True)
+    #expiration_date = Column(DATETIME, nullable=True)
 
 
     # TODO: These models/schemas haven't been implemented yet, so this doesn't work yet

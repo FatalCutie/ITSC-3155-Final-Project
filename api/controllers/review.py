@@ -4,11 +4,12 @@ from fastapi import HTTPException, status, Response, Depends, APIRouter
 from ..models import review as model
 from sqlalchemy.exc import SQLAlchemyError
 
+
 def create(db: Session, request):
     new_review = model.Review(
-        rating = request.rating,
-        reviewText = request.reviewText,
-        order_detail_id = request.order_detail_id
+        rating=request.rating,
+        reviewText=request.reviewText,
+        order_detail_id=request.order_detail_id
     )
 
     try:
@@ -20,6 +21,8 @@ def create(db: Session, request):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
 
     return new_review
+
+
 def read_all(db: Session):
     try:
         result = db.query(model.Review).all()
@@ -27,6 +30,7 @@ def read_all(db: Session):
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
     return result
+
 
 def read_one(db: Session, review_id):
     try:
@@ -37,6 +41,7 @@ def read_one(db: Session, review_id):
         error = str(e.__dict__['orig'])
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=error)
     return review
+
 
 def update(db: Session, review_id, request):
     try:

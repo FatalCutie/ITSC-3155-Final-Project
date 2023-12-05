@@ -1,12 +1,12 @@
 from typing import Optional
 from pydantic import BaseModel
-from sqlalchemy import DATETIME
+from datetime import datetime
 
 
 class CouponBase(BaseModel):
     discount: int
     code: str
-    expiration_date: Optional[DATETIME]
+    expiration_date: Optional[datetime] = None
 
 
 class CouponCreate(CouponBase):
@@ -20,9 +20,7 @@ class CouponUpdate(BaseModel):
 
 
 class Coupon(CouponBase):
-    discount: int
-    code: int
-    expiration_date = str
+    id: int
 
     class ConfigDict:
         from_attributes = True
